@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bpAdminMain" prefHeight="700.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.conceptos_poo.saborsistemas.Controladores.AdminMainController">
+    <top>
+        <MenuBar fx:id="menuBarAdmin" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesión" />
+                        <MenuItem mnemonicParsing="false" onAction="#salirAplicacion" text="Salir" />
+                    </items>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="Gestionar">
+                    <items>
+                        <MenuItem fx:id="menuItemGestionarProductos" mnemonicParsing="false" onAction="#abrirGestionProductos" text="Gestionar Productos" />
+                        <MenuItem fx:id="menuItemGestionarUsuarios" mnemonicParsing="false" onAction="#abrirGestionUsuarios" text="Gestionar Usuarios" />
+                        <MenuItem fx:id="menuItemGestionarVentas" mnemonicParsing="false" onAction="#abrirGestionVentas" text="Gestionar Ventas" />
+                    </items>
+
+                </Menu>
+
+                <Menu fx:id="menuEstilo" mnemonicParsing="false" text="Estilo">
+                </Menu>
+
+                <Menu fx:id="menuIdioma" mnemonicParsing="false" text="Idioma">
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TabPane fx:id="tabPaneAdmin" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+        </TabPane>
+    </center>
+</BorderPane>

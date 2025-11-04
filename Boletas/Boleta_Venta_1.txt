@@ -1,0 +1,19 @@
+=========================================
+           SABOR SISTEMAS
+           BOLETA DE VENTA N° 1
+=========================================
+FECHA: 30/10/2025 09:25:35
+VENDEDOR: jclv@gmail.com
+-----------------------------------------
+CLIENTE: asd asd
+DNI: 123
+METODO DE PAGO: Efectivo
+-----------------------------------------
+DETALLES DE LA VENTA:
+PRODUCTO             CANT.    P.UNIT.    SUBTOTAL  
+-----------------------------------------
+Ensalada             1        7.00       7.00      
+-----------------------------------------
+MONTO TOTAL: 7.00
+=========================================
+       ¡GRACIAS POR SU COMPRA!

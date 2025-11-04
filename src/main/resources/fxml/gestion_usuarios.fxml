@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="contenedorPrincipal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.conceptos_poo.saborsistemas.Controladores.Adm_UsuariosController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label text="Gestión de usuarios">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label text="Filtrar:" />
+                        <TextField fx:id="txtFiltroUsuarios" prefWidth="200.0" promptText="Buscar por nombre, rol..." />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </HBox>
+
+                <HBox spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox spacing="15.0" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-background-color: #ffffff; -fx-background-radius: 5;" HBox.hgrow="NEVER">
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                            <children>
+                                <Label text="Formulario de Usuario">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <GridPane hgap="10.0" vgap="10.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Usuario (Correo):" GridPane.rowIndex="0" />
+                                        <TextField fx:id="txtUsername" promptText="correo@ejemplo.com" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                                        <Label text="Contraseña:" GridPane.rowIndex="1" />
+                                        <PasswordField fx:id="txtPassword" promptText="Dejar vacío para no cambiar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                        <Label text="Rol:" GridPane.rowIndex="2" />
+                                        <ComboBox fx:id="cbxPerfil" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                    </children>
+                                </GridPane>
+                                <Label fx:id="lblMensajeUsuario" wrapText="true" />
+                            </children>
+                     <VBox alignment="TOP_RIGHT" prefHeight="75.0" prefWidth="249.0">
+                        <children>
+                                    <Button fx:id="btnGuardarUsuario" mnemonicParsing="false" onAction="#guardarUsuario" prefHeight="30.0" prefWidth="196.0" style="-fx-background-color: #133558; -fx-text-fill: white;" text="Guardar" />
+                                    <Button fx:id="btnCancelarUsuario" mnemonicParsing="false" onAction="#cancelarEdicionUsuario" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #6c757d; -fx-text-fill: white;" text="Cancelar">
+                              <VBox.margin>
+                                 <Insets top="15.0" />
+                              </VBox.margin></Button>
+                        </children>
+                     </VBox>
+                            <HBox alignment="BOTTOM_CENTER" prefHeight="47.0" prefWidth="249.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </VBox>
+                        <TableView fx:id="tableViewUsuarios" HBox.hgrow="ALWAYS">
+                        </TableView>
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

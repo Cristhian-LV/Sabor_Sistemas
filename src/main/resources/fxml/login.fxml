@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #133558;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.conceptos_poo.saborsistemas.Controladores.LoginController"> <padding>
+    <Insets bottom="25.0" left="50.0" right="50.0" top="50.0" />
+</padding>
+
+    <ImageView fitHeight="220.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../img/logo_sabor_sistemas.png" />
+        </image>
+    </ImageView>
+
+    <Label text="Iniciar Sesión" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <GridPane alignment="CENTER" hgap="10.0" prefHeight="150.0" prefWidth="337.0" vgap="10.0">
+        <columnConstraints>
+            <javafx.scene.layout.ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="233.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="233.0" />
+        </columnConstraints>
+        <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label alignment="BOTTOM_LEFT" prefHeight="53.0" prefWidth="39.0" text="Correo:" textFill="WHITE" />
+        <TextField fx:id="emailField" prefHeight="32.0" prefWidth="337.0" promptText="correo@.com" text="jclv@gmail.com" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding></TextField>
+        <Label alignment="BOTTOM_LEFT" prefHeight="44.0" prefWidth="63.0" text="Contraseña:" textFill="WHITE" GridPane.rowIndex="2" />
+        <PasswordField fx:id="passwordField" prefHeight="34.0" prefWidth="337.0" promptText="Contraseña" text="admin123" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding></PasswordField>
+    </GridPane>
+
+    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#Entrar" prefHeight="40.0" prefWidth="200.0" style="-fx-font-size: 16px; -fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 5;" text="Ingresar" />
+
+    <Label fx:id="errorMessageLabel" alignment="CENTER" maxWidth="300.0" textFill="#ff6961" wrapText="true">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="registrarButton" mnemonicParsing="false" onAction="#Volver" prefHeight="30.0" prefWidth="164.0" style="-fx-font-size: 14px; -fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 5;" text="Registrarse">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin></Button>
+
+</VBox>
