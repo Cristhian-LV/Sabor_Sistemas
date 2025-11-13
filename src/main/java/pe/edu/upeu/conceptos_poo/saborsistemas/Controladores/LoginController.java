@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import pe.edu.upeu.conceptos_poo.saborsistemas.components.StageManager;
 import pe.edu.upeu.conceptos_poo.saborsistemas.dto.SessionManager;
 import pe.edu.upeu.conceptos_poo.saborsistemas.modelos.Usuario;
+import pe.edu.upeu.conceptos_poo.saborsistemas.service.IUsuarioService;
 import pe.edu.upeu.conceptos_poo.saborsistemas.service.UsuarioService;
 
 import java.io.IOException;
@@ -120,7 +121,7 @@ public class LoginController {
                     errorMessageLabel.setText("Login de Cliente exitoso. Interfaz en construcción.");
                     // cargarEscenaGenerica("/fxml/cliente_dashboard.fxml", "Panel de Cliente");
                 } else if ("Vendedor".equalsIgnoreCase(usuario.getRol())) {
-                    cargarEscenaAdmin("/fxml/gestion_venta.fxml", "Panel de Vendedor");
+                    cargarEscenaAdmin("/fxml/main_venta.fxml", "Panel de Vendedor");
                 } else {
                     // Rol desconocido, podrías mostrar un error o una interfaz genérica
                     errorMessageLabel.setText("Rol de usuario no reconocido: " + usuario.getRol());

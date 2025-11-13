@@ -44,7 +44,7 @@ public class AdminMainController {
         configurarMenuIdioma();
         abrirTabConFXML("/fxml/gestion_productos.fxml", "Gestionar Productos");
         abrirTabConFXML("/fxml/gestion_usuarios.fxml", "Gestionar Usuarios");
-        abrirTabConFXML("/fxml/gestion_venta.fxml", "Gestionar Ventas");
+        abrirTabConFXML("/fxml/main_venta.fxml", "Gestionar Ventas");
         abrirTabConFXML("/fxml/gestion_productos.fxml", "Gestionar Productos");
     }
 
@@ -60,7 +60,7 @@ public class AdminMainController {
     // *** NUEVO: Método para abrir la pestaña de ventas ***
     @FXML
     private void abrirGestionVentas(ActionEvent event) {
-        abrirTabConFXML("/fxml/gestion_venta.fxml", "Gestionar Ventas");
+        abrirTabConFXML("/fxml/main_venta.fxml", "Gestionar Ventas");
     }
     // *** FIN NUEVO ***
 

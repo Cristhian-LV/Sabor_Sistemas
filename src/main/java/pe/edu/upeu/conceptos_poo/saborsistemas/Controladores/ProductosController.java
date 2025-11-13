@@ -128,53 +128,9 @@ public class ProductosController {
         ComboBoxOption categoriaSeleccionada = cbxCategoriaProducto.getSelectionModel().getSelectedItem();
         ComboBoxOption unidadSeleccionada = cbxUnidadMedidaProducto.getSelectionModel().getSelectedItem();
 
-        //Validacion
-        // 1. Inicializar la bandera de validación
-        boolean todosLosCamposLlenos = true;
-
-        // 2. Limpiar estilos previos de error (restablecer a estado normal)
-        // Suponiendo que 'nombre', 'precioStr', 'stockStr' se obtienen de TextField/s
-        // y 'categoriaSeleccionada', 'unidadSeleccionada' de ComboBox/s.
-        limpiarEstilosDeError(); // Método que debes implementar (ver sección abajo)
-
-        // 3. Validar el campo 'nombre'
-        if (nombre.isEmpty()) {
-            txtNombreProducto.setPromptText("⚠️ Campo obligatorio"); // Suponiendo que el TextField se llama 'txtNombreProducto'
-            aplicarEstiloError(txtNombreProducto);
-            todosLosCamposLlenos = false;
-        }
-
-        // 4. Validar el campo 'precio'
-        if (precioStr.isEmpty()) {
-            txtPrecioUnitario.setPromptText("⚠️ Campo obligatorio"); // Suponiendo que el TextField se llama 'txtPrecio'
-            aplicarEstiloError(txtPrecioUnitario);
-            todosLosCamposLlenos = false;
-        }
-
-        // 5. Validar el campo 'stock'
-        if (stockStr.isEmpty()) {
-            txtStockProducto.setPromptText("⚠️ Campo obligatorio"); // Suponiendo que el TextField se llama 'txtStock'
-            aplicarEstiloError(txtStockProducto);
-            todosLosCamposLlenos = false;
-        }
-
-        // 6. Validar ComboBox 'categoría' (asumiendo que es una variable obtenida del ComboBox)
-        if (categoriaSeleccionada == null) {
-            // En JavaFX, para ComboBox es mejor aplicar el estilo al control directamente
-            aplicarEstiloError(cbxCategoriaProducto); // Suponiendo que el ComboBox se llama 'cmbCategoria'
-            todosLosCamposLlenos = false;
-        }
-
-        // 7. Validar ComboBox 'unidad'
-        if (unidadSeleccionada == null) {
-            aplicarEstiloError(cbxUnidadMedidaProducto); // Suponiendo que el ComboBox se llama 'cmbUnidad'
-            todosLosCamposLlenos = false;
-        }
-
-        // 8. Finalizar: Si no pasa la validación, mostrar un único mensaje de error y salir.
-        if (!todosLosCamposLlenos) {
-            mostrarMensajeProducto("Por favor, complete todos los campos obligatorios.", true);
-            return; // Detiene el proceso de guardado
+        if (nombre.isEmpty() || precioStr.isEmpty() || stockStr.isEmpty() || categoriaSeleccionada == null || unidadSeleccionada == null) {
+            mostrarMensajeProducto("Todos los campos son obligatorios.", true);
+            return;
         }
 
         double precio;
@@ -233,25 +189,6 @@ public class ProductosController {
             mostrarMensajeProducto("Error al guardar producto: " + e.getMessage(), true);
             e.printStackTrace();
         }
-    }
-
-    // Método para aplicar el estilo de error a cualquier control de JavaFX
-    private void aplicarEstiloError(Control control) {
-        control.getStyleClass().add("campo-obligatorio");
-    }
-
-    // Método para limpiar los estilos de error de todos los controles
-// Debes llamar a este método al inicio de la validación
-    private void limpiarEstilosDeError() {
-        // Ejemplo para limpiar un TextField:
-        // Asegúrate de limpiar todos los controles relevantes
-        txtNombreProducto.getStyleClass().remove("campo-obligatorio");
-        txtPrecioUnitario.getStyleClass().remove("campo-obligatorio");
-        txtStockProducto.getStyleClass().remove("campo-obligatorio");
-
-        // Limpiar ComboBox:
-        cbxCategoriaProducto.getStyleClass().remove("campo-obligatorio");
-        cbxUnidadMedidaProducto.getStyleClass().remove("campo-obligatorio");
     }
 
     private void editarProducto(Producto producto) {

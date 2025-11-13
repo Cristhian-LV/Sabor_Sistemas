@@ -1,0 +1,19 @@
+=========================================
+           SABOR SISTEMAS
+           BOLETA DE VENTA N° 2
+=========================================
+FECHA: 31/10/2025 07:49:22
+VENDEDOR: jclv@gmail.com
+-----------------------------------------
+CLIENTE: juan luque
+DNI: 77068639
+METODO DE PAGO: Débito
+-----------------------------------------
+DETALLES DE LA VENTA:
+PRODUCTO             CANT.    P.UNIT.    SUBTOTAL  
+-----------------------------------------
+Hamburguesa          2        8.50       17.00     
+-----------------------------------------
+MONTO TOTAL: 17.00
+=========================================
+       ¡GRACIAS POR SU COMPRA!

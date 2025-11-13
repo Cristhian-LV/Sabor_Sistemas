@@ -1,0 +1,21 @@
+=========================================
+           SABOR SISTEMAS
+           BOLETA DE VENTA N° 3
+=========================================
+FECHA: 31/10/2025 07:50:16
+VENDEDOR: jclv@gmail.com
+-----------------------------------------
+CLIENTE: paola villasante
+DNI: 77068639
+METODO DE PAGO: Efectivo
+-----------------------------------------
+DETALLES DE LA VENTA:
+PRODUCTO             CANT.    P.UNIT.    SUBTOTAL  
+-----------------------------------------
+Papas Fritas         3        3.00       9.00      
+Ensalada             1        7.00       7.00      
+Coca Cola (500ml)    1        2.50       2.50      
+-----------------------------------------
+MONTO TOTAL: 18.50
+=========================================
+       ¡GRACIAS POR SU COMPRA!

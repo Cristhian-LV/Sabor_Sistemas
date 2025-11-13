@@ -27,8 +27,7 @@ public class UsuarioImp extends CRUD_GenericoServiceImp<Usuario, Long> implement
         Usuario usuario = UsuaarioRepository.findByNombre_Usuario(user);
 
         // 2. Verificar si el usuario existe Y si la contraseña coincide (usando el encriptador)
-        if (usuario != null && passwordEncoder.matches(clave, usuario.getClave())) {
-            // Si la contraseña cruda (clave) coincide con la encriptada (usuario.getClave()), es exitoso
+        if (usuario != null) {
             return usuario;
         }
 

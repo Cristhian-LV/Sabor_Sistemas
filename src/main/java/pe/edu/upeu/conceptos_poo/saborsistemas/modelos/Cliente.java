@@ -15,10 +15,12 @@ import pe.edu.upeu.conceptos_poo.saborsistemas.enums.TipoDocumento;
 @Table (name = "ss_Cliente")
 public class Cliente {
     @Id
-    @Column(name = "dni_ruc", nullable = false)
+    @Column(name = "dniruc", nullable = false)
     private String dniruc;
     @Column(name = "nombres", nullable = false)
     private String nombres;
+    @Column(name = "rep_legal", length = 160)
+    private String repLegal;
     @Column(name = "Tipo_Documento", nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoDocumento tipoDocumento;
